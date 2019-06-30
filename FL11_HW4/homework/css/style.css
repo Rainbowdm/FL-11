@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans';
 }
 
 header,
@@ -12,7 +12,8 @@ nav {
 }
 
 body {
-    max-width: 1920px;
+    max-width: 1365px;
+    min-width: 900px;
     margin: 0 auto;
 }
 
@@ -74,7 +75,7 @@ header nav a:hover {
     position: absolute;
     text-align: center;
     width: 100%;
-    top: 47%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -83,17 +84,17 @@ header nav a:hover {
     text-transform: uppercase;
     letter-spacing: 6px;
     color: #FFFFFF;
-    font-size: 45px;
+    font-size: 50px;
     font-weight: 300;
 }
 
 .content .content-text h1 span {
-    font-size: 65px;
+    font-size: 75px;
 }
 
 .content .content-text p {
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .content .content-links {
@@ -102,12 +103,12 @@ header nav a:hover {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    bottom: 93px;
+    bottom: 14%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-    max-width: 900px;
-    padding: 0 -40px;
+    max-width: 73%;
+    padding: 0 40px;
 }
 
 .content .content-links a {
@@ -143,9 +144,10 @@ header nav a:hover {
 
 .columns .right-text p {
     color: #FFFFFF;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
     padding-top: 10px;
+    line-height: 1.5;
 }
 
 .columns .left-text {
@@ -155,7 +157,7 @@ header nav a:hover {
 
 .columns .left-text p {
     color: #000000;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .articles .article {
@@ -170,7 +172,7 @@ header nav a:hover {
     font-weight: normal;
     text-align: center;
     margin-bottom: 40px;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .articles .article.image-left .article-text {
@@ -295,11 +297,12 @@ header nav a:hover {
 
 .news .item .explore {
     position: absolute;
+    display: inline-block;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    display: inline-block;
     padding: 10px 90px;
+    font-weight: bold;
     color: #FFFFFF;
     background: rgba(9, 119, 116, 0.8);
     z-index: 4;
@@ -341,13 +344,13 @@ header nav a:hover {
 
 .subscribe {
     background: #F3F3F3;
-    padding: 30px 15px;
+    padding: 30px 25px;
 }
 
 .subscribe p {
     padding-right: 40px;
     text-align: left;
-    font-size: 12px;
+    font-size: 14px;
     margin-bottom: 30px;
 }
 
@@ -373,6 +376,7 @@ header nav a:hover {
 }
 
 .subscribe input {
+    background-color: #F0F0F0;
     height: 38px;
     padding: 5px;
     line-height: 28px;
@@ -394,7 +398,6 @@ button {
 }
 
 footer p {
-    margin-left: 5px;
     flex-basis: 30%;
     color: #9E9E9E;
     font-size: 12px;
