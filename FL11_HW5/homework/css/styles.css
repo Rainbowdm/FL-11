@@ -22,10 +22,12 @@ main,
 footer {
     display: block;
     margin-bottom: 25px;
+    width: 1400px;
 }
 
 header {
     display: flex;
+    flex-flow: row wrap;
     background-color: #162b4d;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +37,7 @@ header {
 }
 
 header .logo {
+    position: absolute;
     text-decoration: none;
     color: #fff;
     letter-spacing: -3px;
@@ -45,6 +48,10 @@ header .logo {
 
 header .logo span {
     color: #B71757;
+}
+
+.list {
+    margin-left: 45em;
 }
 
 .list li {
@@ -64,6 +71,39 @@ header .logo span {
 .list a:hover {
     background-color: #283d5f;
     height: 100px;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.items {
+    width: 1040px;
+}
+
+article:nth-child(2n) {
+    flex-direction: row-reverse;
+}
+
+img {
+    max-width: 100%;
+}
+
+.image {
+    position: relative;
+}
+
+.image,
+.info {
+    flex: 1 0 50%;
 }
 
 .post-1 {
