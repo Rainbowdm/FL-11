@@ -11,7 +11,7 @@ let xc = (aax + bbx) / num;
 let yc = (aay + bby) / num;
 
 if (xc === ccx && yc === ccy) {
-    console.log('c divides AB segment by half - ' + true);
+    console.log(true);
 } else {
-    console.log('c doesnt device AB segment by half - ' + false);
+    console.log(false);
 }
