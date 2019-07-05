@@ -3,7 +3,6 @@ let b = Number(window.prompt('b = ', ''));
 let c = Number(window.prompt('c = ', ''));
 
 if (a + b > c && b + c > a && a + c > b) {
-    console.log('Triangle exists');
     if (a === b && b === c && c === a) {
         console.log('Eequivalent triangle');
     } else if (a === b && b !== c || b === c && b !== a || a === c && b !== c) {
