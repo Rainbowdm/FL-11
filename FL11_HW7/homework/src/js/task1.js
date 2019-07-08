@@ -14,12 +14,10 @@ if (checkEmail === '' || checkEmail === null) {
 
 if (password === '' || password === null) {
     alert('Canceled');
-}
-if (checkEmail === 'user@gmail.com' && password === 'UserPass') {
+} else if (checkEmail === 'user@gmail.com' && password === 'UserPass') {
     console.log('valid password');
-    if (checkEmail === 'admin@gmail.com' && password === 'AdminPass') {
-        console.log('valid password');
-    }
+} else if (checkEmail === 'admin@gmail.com' && password === 'AdminPass') {
+    console.log('valid password');
 } else {
     alert('Wrong password');
 }
