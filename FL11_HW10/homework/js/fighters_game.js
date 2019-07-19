@@ -14,29 +14,24 @@ class Fighter {
     getDamage() {
         return this.damage;
     }
-    getHealth() {
-        return this.health;
-    }
     getAgility() {
         return this.agility;
+    }
+    getHealth() {
+        return this.health;
     }
 
     attack(defender) {
         let maxAttack = 100;
         let attackSuccess = maxAttack - defender.getAgility();
-        let possibleSuccess = Math.floor(Math.random() * maxAttack);
-        if (possibleSuccess <= attackSuccess) {
+        let possibleAttackSuccess = Math.floor(Math.random() * maxAttack);
+        if (possibleAttackSuccess <= attackSuccess) {
             defender.dealDamage(this.getDamage());
             console.log(this.name + ' make ' + this.damage + ' damage to ' + defender.name);
         } else {
             console.log(this.name + ' attack missed ');
         }
     }
-
-    logCombatHistory() {
-        console.log('Name: ' + this.name + ',' + ' Wins: ' + this.win + ',' + ' Losses: ' + this.lose);
-    }
-
     heal(healthLevel) {
         let maxHealth = 100;
         this.health = this.health + healthLevel;
@@ -44,7 +39,6 @@ class Fighter {
             this.health = maxHealth;
         }
     }
-
     dealDamage(damage) {
         this.health = this.health - damage;
         if (this.health < 0) {
@@ -59,13 +53,16 @@ class Fighter {
     addLose() {
         return this.lose++;
     }
+    logCombatHistory() {
+        console.log('Name: ' + this.name + ' Wins: ' + this.win + ',' + ' Losses: ' + this.lose);
+    }
 }
 
-const myFighter = new Fighter({ name: 'John', damage: 20, agility: 25, hp: 100 });
-const myFighter2 = new Fighter({ name: 'Sam', damage: 10, agility: 40, hp: 120 });
+const myFighter = new Fighter({ name: 'John', damage: 20, agility: 25, health: 100 });
+const myFighter2 = new Fighter({ name: 'Sam', damage: 10, agility: 40, health: 120 });
 
 let firstName = myFighter.getName();
-console.log(firstName);
+console.log(myFighter.getName());
 
 let secondName = myFighter2.getName();
 console.log(secondName);
@@ -74,3 +71,8 @@ myFighter.attack(myFighter2);
 myFighter2.attack(myFighter);
 
 myFighter.logCombatHistory();
+myFighter2.logCombatHistory();
+
+
+console.log('Health fighter ' + myFighter.getName() + ': ' + myFighter.getHealth());
+console.log('Health fighter ' + myFighter2.getName() + ': ' + myFighter2.getHealth());
