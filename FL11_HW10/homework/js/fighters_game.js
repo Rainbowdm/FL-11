@@ -20,7 +20,6 @@ class Fighter {
     getHealth() {
         return this.health;
     }
-
     attack(defender) {
         let maxAttack = 100;
         let attackSuccess = maxAttack - defender.getAgility();
@@ -31,6 +30,9 @@ class Fighter {
         } else {
             console.log(this.name + ' attack missed ');
         }
+    }
+    logCombatHistory() {
+        console.log('Name: ' + this.name + ' Wins: ' + this.win + ',' + ' Losses: ' + this.lose);
     }
     heal(healthLevel) {
         let maxHealth = 100;
@@ -52,9 +54,6 @@ class Fighter {
 
     addLose() {
         return this.lose++;
-    }
-    logCombatHistory() {
-        console.log('Name: ' + this.name + ' Wins: ' + this.win + ',' + ' Losses: ' + this.lose);
     }
 }
 
