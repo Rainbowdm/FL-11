@@ -57,27 +57,27 @@ class Fighter {
     }
 }
 
-function battle(fighterOne, fighterTwo) {
-    while (fighterOne.health > 0 && fighterTwo.health > 0) {
-        fighterOne.attack(fighterTwo);
-        if (fighterTwo.health <= 0) {
-            console.log(fighterOne.name + ' won!');
-            fighterOne.addWin();
-            fighterTwo.addLose();
+function battle(fighter, fighter2) {
+    while (fighter.health > 0 && fighter2.health > 0) {
+        fighter.attack(fighter2);
+        if (fighter2.health <= 0) {
+            console.log(fighter.name + ' won!');
+            fighter.addWin();
+            fighter2.addLose();
             break;
         }
-        fighterTwo.attack(fighterOne);
-        if (fighterOne.health <= 0) {
-            console.log(fighterTwo.name + ' won!');
-            fighterTwo.addWin();
-            fighterOne.addLose();
+        fighter2.attack(fighter);
+        if (fighter.health <= 0) {
+            console.log(fighter2.name + ' won!');
+            fighter2.addWin();
+            fighter.addLose();
             break;
         }
     }
-    if (fighterOne.health === 0) {
-        console.log(fighterOne.name + ' lose!');
-    } else if (fighterTwo.health === 0) {
-        console.log(fighterTwo.name + ' lose!');
+    if (fighter.health === 0) {
+        console.log(fighter.name + ' lose!');
+    } else if (fighter2.health === 0) {
+        console.log(fighter2.name + ' lose!');
     }
 }
 
