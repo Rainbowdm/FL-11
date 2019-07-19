@@ -57,28 +57,27 @@ class Fighter {
     }
 }
 
-function battle(warriorOne, warriorTwo) {
-    while (warriorOne.health > 0 && warriorTwo.health > 0) {
-        if (warriorOne.health > 0 || warriorTwo.health > 0) {
-            warriorOne.attack(warriorTwo);
+function battle(fighterOne, fighterTwo) {
+    while (fighterOne.health > 0 && fighterTwo.health > 0) {
+        fighterOne.attack(fighterTwo);
+        if (fighterTwo.health <= 0) {
+            console.log(fighterOne.name + ' won!');
+            fighterOne.addWin();
+            fighterTwo.addLose();
+            break;
         }
-        if (warriorOne.health > 0 || warriorTwo.health > 0) {
-            warriorTwo.attack(warriorOne);
-        }
-        if (warriorOne.health === 0) {
-            console.log(`${warriorOne.name} is dead and can't fight!`);
-        }
-        if (warriorTwo.health === 0) {
-            console.log(`${warriorTwo.name} is dead and can't fight!`);
+        fighterTwo.attack(fighterOne);
+        if (fighterOne.health <= 0) {
+            console.log(fighterTwo.name + ' won!');
+            fighterTwo.addWin();
+            fighterOne.addLose();
+            break;
         }
     }
-    if (warriorOne.health > 0) {
-        warriorOne.addWin();
-        warriorOne.addLose();
-    }
-    if (warriorTwo.health > 0) {
-        warriorTwo.addWin();
-        warriorTwo.addLose();
+    if (fighterOne.health === 0) {
+        console.log(fighterOne.name + ' lose!');
+    } else if (fighterTwo.health === 0) {
+        console.log(fighterTwo.name + ' lose!');
     }
 }
 
