@@ -57,6 +57,31 @@ class Fighter {
     }
 }
 
+function battle(warriorOne, warriorTwo) {
+    while (warriorOne.health > 0 && warriorTwo.health > 0) {
+        if (warriorOne.health > 0 || warriorTwo.health > 0) {
+            warriorOne.attack(warriorTwo);
+        }
+        if (warriorOne.health > 0 || warriorTwo.health > 0) {
+            warriorTwo.attack(warriorOne);
+        }
+        if (warriorOne.health === 0) {
+            console.log(`${warriorOne.name} is dead and can't fight!`);
+        }
+        if (warriorTwo.health === 0) {
+            console.log(`${warriorTwo.name} is dead and can't fight!`);
+        }
+    }
+    if (warriorOne.health > 0) {
+        warriorOne.addWin();
+        warriorOne.addLose();
+    }
+    if (warriorTwo.health > 0) {
+        warriorTwo.addWin();
+        warriorTwo.addLose();
+    }
+}
+
 const myFighter = new Fighter({ name: 'John', damage: 20, agility: 25, health: 100 });
 const myFighter2 = new Fighter({ name: 'Sam', damage: 10, agility: 40, health: 120 });
 
@@ -69,9 +94,11 @@ console.log(secondName);
 myFighter.attack(myFighter2);
 myFighter2.attack(myFighter);
 
-myFighter.logCombatHistory();
-myFighter2.logCombatHistory();
-
 
 console.log('Health fighter ' + myFighter.getName() + ': ' + myFighter.getHealth());
 console.log('Health fighter ' + myFighter2.getName() + ': ' + myFighter2.getHealth());
+
+battle(myFighter, myFighter2);
+
+myFighter.logCombatHistory();
+myFighter2.logCombatHistory();
