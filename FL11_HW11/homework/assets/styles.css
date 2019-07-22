@@ -65,18 +65,6 @@
     }
     
     main ul li label {
-        font-size: 1em;
         color: #34B0FE;
         cursor: pointer;
-    }
-    
-    main ul li label::before {
-        content: '';
-        display: inline-block;
-        vertical-align: top;
-        width: 16px;
-        height: 16px;
-        margin-right: 10px;
-        border: 1px solid #C8D0D8;
-        transition: 0.2s;
     }
