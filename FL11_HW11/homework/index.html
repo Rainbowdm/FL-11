@@ -4,34 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Homework 11 - TODO Cat List</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400">
     <link rel="stylesheet" href="./assets/material-icons/material-icons.css">
     <link rel="stylesheet" href="./assets/styles.css">
 </head>
 
 <body>
     <div id="root">
-        <header>
-            <h1>TODO Cat List</h1>
-            <p class="notification">Maximum item per list are created</p>
-        </header>
-        <main>
-            <form class="search">
-                <input class="field" placeholder="Add new action" type="text" name="search">
-                <button class="add-item" type="submit">
-                    <i class="material-icons">add_box</i>
-                </button>
-            </form>
-            <hr>
-            <ul>
-                <li class="list-item" draggable="true">
-                    <input class="checkbox" id="item" type="checkbox" name="list">
-                    <label for="item">Find the cat</label>
-                    <i class="material-icons edit">edit</i>
-                    <i class="material-icons delete">delete</i>
-                </li>
-            </ul>
-        </main>
+        <div class="container">
+            <h1 class="heading">TODO Cat List</h1>
+            <div class="add-item">
+                <input type="text" id="new-task" placeholder="Add new action">
+                <button class="btn add">
+          <i class="material-icons">add_box</i>
+        </button>
+            </div>
+            <p class="message"></p>
+            <ul id="list"></ul>
+        </div>
     </div>
+
     <script src="./src/app.js"></script>
 </body>
 
