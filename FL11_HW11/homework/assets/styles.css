@@ -87,6 +87,7 @@
         cursor: pointer;
         position: relative;
         margin-left: 5px;
+        top: 8px;
     }
     
     .material-icons.edit:hover {
@@ -97,6 +98,8 @@
         color: #89C4F4;
         margin-right: 35px;
         cursor: pointer;
+        position: relative;
+        top: 8px;
     }
     
     .material-icons.delete:hover {
